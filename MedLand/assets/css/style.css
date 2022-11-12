@@ -1,10 +1,10 @@
 :root {
   --container: 1200px;
-  --bg-color: rgb(0, 191, 255);
+  --bg-color: #2ac5d9;
   --primary-font-color: #ffff;
   --secundary-font-color: #727272;
-  --font-size: 1.5rem;
-  
+  --font-size: 4.35rem;
+  --font: Arial, Helvetica, sans-serif;
 }
 
 /*--Geral--*/
@@ -14,6 +14,8 @@
 body {
   margin: 0px;
   padding: 0px;
+  font-family: var(--font);
+  
 }
 
 /*--Estilização do cabeçalho--*/
@@ -22,26 +24,26 @@ header {
   display: flex;
   justify-content: center;
   height: 120px;
+  
 }
 .container {
   display: flex;
   justify-content: space-between;
-  /*align-items: center;*/
   width: var(--container);
-  
 }
+
 /*---Área do logo---*/
 .logo {
   display: flex;
   align-items: center;
 }
 /*---Área do menu---*/
-.menu{
- display: flex;
- align-items: center;
+.menu {
+  display: flex;
+  align-items: center;
 }
 nav ul,
-nav li{
+nav li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -56,19 +58,198 @@ nav a {
   margin-left: 1rem;
   color: var(--secundary-font-color);
   padding: 15px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav .active a,
 nav a:hover {
-  background-color: #39aae1;
+  background-color: var(--bg-color);
   color: var(--primary-font-color);
+  border-radius: 12px;
 }
 
 /*---Estilização do banner---*/
-#banner {
-  background-image: url('../img/img.jpg');
+#banner,
+#banner-dp,
+#banner-convenio {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/img.jpg");
   background-position: center;
   background-size: cover;
-  height: 670px;
+  height: 710px;
+  filter: grayscale(0%);
+  transition: all 0.6s linear;
+}
+#banner:hover {
+  filter: grayscale(40%);
+}
+
+.column {
+  flex-direction: column;
+}
+.banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--primary-font-color);
+  font-family: var(--font);
+}
+.banner-text h1,
+.banner-text h2 {
+  text-shadow: 0px 1px 0px #555555;
+  padding: 0;
+  margin: 0;
+  max-width: 400px;
+}
+.banner-text h1 {
+  font-size: var(--font-size);
+}
+.banner-text h2 {
+  font-size: 1.72rem;
+  margin-top: 2rem;
+}
+.banner-specialties {
+  display: flex;
+  flex-direction: row;
+  height: 230px;
+  color: var(--primary-font-color);
+  margin-top: 3rem;
+}
+
+.box-specialties {
+  flex: 1;
+  padding: 20px;
+}
+#specialties-1 {
+  background-color: #1ca39e;
+}
+#specialties-2 {
+  background-color: #026f6e;
+}
+#specialties-3 {
+  background-color: #09456c;
+}
+#specialties-4 {
+  background-color: #19274e;
+}
+.box-specialties-title {
+  font-size: 1.31rem;
+}
+.box-specialties-desc {
+  font-size: 0.75rem;
+  margin: 20px 0 5px 0px;
+  height: 108px;
+}
+.box-specialties a {
+  display: inline-block;
+  border: 1px solid #ffff;
+  border-radius: 12px;
+  padding: 8px;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(22, 22, 22);
+}
+.box-specialties a:hover {
+  background-color: var(--bg-color);
+  font-weight: bold;
+}
+
+/* -- Página de departamentos---*/
+#banner-dp {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/capa-departamento2.jpg");
+  height: 100%;
+}
+
+#banner-dp:hover {
+  filter: grayscale(50%);
+}
+.container-dp,
+.container-convenio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: var(--secundary-font-color);
+  margin: 2rem 0;
+}
+.departamento,
+.convenios {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  background-color: #ffffff;
+  opacity : 0.80;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgb(74, 74, 74);
+}
+.departamento:hover,
+.convenios:hover{
+  opacity : 1;
+}
+.departamento h2 {
+  
+  color: #000;
+  font-size: 1.5rem;
+  
+}
+.departamento h2:hover{
+  color: var(--bg-color);
+}
+.departamento{
+ 
+ padding-left: 29px;
+}
+.departamento ul{
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+
+}
+.title-dp{
+  color: rgb(0, 0, 0);
+  font-weight: 750;
+  padding-left: 0px;
+}
+
+/* -- PÁGINAS DE CONVENIOS--*/
+#banner-convenio{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/capa-convenio.jpg");
+  height: 100%;
+}
+.convenios{
+  padding-left: 29px;
+}
+.convenios ul{
+  padding: 0;
+}
+.convenios li {
+  background-color: #2ac5d9;
+  margin: 5px 0;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: var(--primary-font-color);
+  list-style: none;
+}
+.convenios li:hover{
+  background-color: #19274e;
+}
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin-top: 2rem;
+}
+footer a {
+  text-decoration: none;
+  color: #343434;
+}
+footer a:hover{
+  text-decoration: underline;
+  color: var(--bg-color);
 }
