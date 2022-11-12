@@ -1,0 +1,18 @@
+### Centro médico MedLand ⚕️🩺
+
+------
+
+#### *Estudos sobre display-flex*
+
+
+
+
+
+Projetando uma página web de uma clinica médica
+
+O intuito do projeto é:
+
+- Melhorar o uso de display-flex. 
+- Trainar o uso de variáveis no css.
+- Desenvolver uma estrutura semântica .
+
