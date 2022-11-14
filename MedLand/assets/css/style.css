@@ -1,6 +1,7 @@
 :root {
   --container: 1200px;
   --bg-color: #2ac5d9;
+  --secundary-bg-color: #09456c;
   --primary-font-color: #ffff;
   --secundary-font-color: #727272;
   --font-size: 4.35rem;
@@ -16,7 +17,6 @@ body {
   padding: 0px;
   font-family: var(--font);
   transition: all 0.6s linear;
-  
 }
 
 /*--Estilização do cabeçalho--*/
@@ -25,7 +25,6 @@ header {
   display: flex;
   justify-content: center;
   height: 120px;
-  
 }
 .container {
   display: flex;
@@ -165,36 +164,31 @@ nav a:hover {
 }
 #geral section {
   flex: 2;
-  border: 2px solid red;
 }
-#geral aside{
+#geral aside {
   flex: 1;
-  border: 2px solid greenyellow;
 }
-.widget-title{
+.widget-title {
   margin-top: 1.87rem;
   margin-bottom: 1.25rem;
 }
 
-.widget-title-text{
+.widget-title-text {
   font-size: 1.31rem;
   font-weight: bold;
 }
-.widget-title-text-bar{
+.widget-title-text-bar {
   width: 50px;
   height: 2px;
   background-color: var(--bg-color);
   margin-top: 10px;
 }
-#departament{
+#departament {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid rgb(255, 1, 221);
   justify-content: space-around;
-  
-
 }
-.widget-body-card{
+.widget-body-card {
   width: 180px;
   height: 180px;
   margin: 5px;
@@ -204,7 +198,7 @@ nav a:hover {
 #clinico,
 #pediatria,
 #ginecologista,
-#ortopedia{
+#ortopedia {
   background-position: center;
   background-size: cover;
   filter: grayscale(0%);
@@ -212,45 +206,42 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   background-repeat: no-repeat;
-
 }
 
 #clinico:hover,
 #pediatria:hover,
 #ginecologista:hover {
   background-size: 110%;
- 
-
 }
-#ortopedia:hover{
+#ortopedia:hover {
   background-size: 180%;
-
 }
 #departament a {
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--primary-font-color);
 }
-#departament a:hover{
+#departament a:hover {
   border: 1px solid var(--bg-color);
   padding: 5px;
 }
-#clinico{
-  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/img-g.jpg');
+#clinico {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/img-g.jpg");
 }
 
-#pediatria{
-  
-  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/img-p.jpg');
-
+#pediatria {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/img-p.jpg");
 }
 
-#ortopedia{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/img-o.jpg');
+#ortopedia {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/img-o.jpg");
 }
-#ginecologista{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../img/img-gi.jpg');
-
+#ginecologista {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/img-gi.jpg");
 }
 /* 
 -- Página de departamentos---*/
@@ -278,35 +269,33 @@ nav a:hover {
   height: 400px;
   margin: 10px;
   background-color: #ffffff;
-  opacity : 0.80;
+  opacity: 0.8;
   border-radius: 7px;
   padding: 10px;
   box-shadow: 5px 5px 10px rgb(74, 74, 74);
 }
 .departamento:hover,
-.convenios:hover{
-  opacity : 1;
+.convenios:hover {
+  opacity: 1;
 }
 .departamento h2 {
-  
   color: #000;
   font-size: 1.5rem;
-  
+  transition: 0.4s;
 }
-.departamento h2:hover{
+.departamento h2:hover {
   color: var(--bg-color);
 }
-.departamento{
- 
- padding-left: 29px;
+.departamento {
+  padding-left: 29px;
+  transition: .4s;
 }
-.departamento ul{
+.departamento ul {
   list-style: none;
   margin: 20px 0;
   padding: 0;
-
 }
-.title-dp{
+.title-dp {
   color: rgb(0, 0, 0);
   font-weight: 750;
   padding-left: 0px;
@@ -315,15 +304,15 @@ nav a:hover {
 /* 
 -- PÁGINAS DE CONVENIOS--*/
 
-#banner-convenio{
+#banner-convenio {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/capa-convenio.jpg");
   height: 100%;
 }
-.convenios{
+.convenios {
   padding-left: 29px;
 }
-.convenios ul{
+.convenios ul {
   padding: 0;
 }
 .convenios li {
@@ -333,22 +322,78 @@ nav a:hover {
   border-radius: 5px;
   color: var(--primary-font-color);
   list-style: none;
+  transition: 0.4s;
 }
-.convenios li:hover{
+.convenios li:hover {
   background-color: #19274e;
 }
-footer{
+footer {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
   margin-top: 2rem;
+  text-transform: uppercase;
 }
 footer a {
   text-decoration: none;
   color: #343434;
 }
-footer a:hover{
+footer a:hover {
   text-decoration: underline;
   color: var(--bg-color);
+}
+
+/* -- Estilização de Referências -- */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+article {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+article .reference-data {
+  display: flex;
+}
+
+article .reference-data-post,
+.reference-comments {
+  background-color: var(--secundary-bg-color);
+  color: var(--primary-font-color);
+  font-size: 1.1rem;
+  padding: 10px;
+}
+.reference-comments {
+  background-color: var(--bg-color);
+  margin-left: 4px;
+}
+article a {
+  text-decoration: none;
+}
+article .refence-img {
+  margin-top: 1.87rem;
+}
+article .refence-img img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+article .refence-title h2 {
+  margin: 1.56rem 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--secundary-font-color);
+}
+article span {
+  font-weight: bold;
+  color: var(--bg-color);
+}
+article .reference-resume p {
+  font-size: 0.87rem;
+  color: #5c5c5c;
+  line-height: 20px;
+  margin-bottom: 30px;
 }
