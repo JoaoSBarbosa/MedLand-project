@@ -1,7 +1,10 @@
 :root {
   --container: 1200px;
   --bg-color: #2ac5d9;
-  --secundary-bg-color: #09456c;
+  --bg-color-card-1: #1ca39e;
+  --bg-color-card-2: #026f6e;
+  --bg-color-card-3: #09456c;
+  --bd-color-card-4: #19274e;
   --primary-font-color: #ffff;
   --secundary-font-color: #727272;
   --font-size: 4.35rem;
@@ -123,16 +126,16 @@ nav a:hover {
   padding: 20px;
 }
 #specialties-1 {
-  background-color: #1ca39e;
+  background-color: var(--bg-color-card-1);
 }
 #specialties-2 {
-  background-color: #026f6e;
+  background-color: var(--bg-color-card-2);
 }
 #specialties-3 {
-  background-color: #09456c;
+  background-color: var(--bg-color-card-3);
 }
 #specialties-4 {
-  background-color: #19274e;
+  background-color: var(--bd-color-card-4);
 }
 .box-specialties-title {
   font-size: 1.31rem;
@@ -327,22 +330,7 @@ nav a:hover {
 .convenios li:hover {
   background-color: #19274e;
 }
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  margin-top: 2rem;
-  text-transform: uppercase;
-}
-footer a {
-  text-decoration: none;
-  color: #343434;
-}
-footer a:hover {
-  text-decoration: underline;
-  color: var(--bg-color);
-}
+
 
 /* -- Estilização de Referências -- */
 .flex {
@@ -360,7 +348,7 @@ article .reference-data {
 
 article .reference-data-post,
 .reference-comments {
-  background-color: var(--secundary-bg-color);
+  background-color: var(--bg-color-card-2);
   color: var(--primary-font-color);
   font-size: 1.1rem;
   padding: 10px;
@@ -396,4 +384,92 @@ article .reference-resume p {
   color: #5c5c5c;
   line-height: 20px;
   margin-bottom: 30px;
+}
+.flex-column{
+  flex-direction: column;
+}
+footer {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+.footer-menu{
+  display: flex;
+  
+}
+.footer-card{
+  flex: 1;
+  padding: 1.25rem;
+  color: var(--primary-font-color);
+}
+#card-1{
+  background-color: var(--bg-color-card-1);
+}
+#card-2{
+  background-color: var(--bg-color-card-2);
+}
+#card-3{
+  background-color: var(--bg-color-card-3);
+}
+#card-4{
+  background-color: var(--bd-color-card-4);
+}
+.redes-s{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 20px;
+  
+}
+
+.redes-s i{
+  font-size: 2rem;
+}
+#clinicas {
+  padding: 0px 5px;
+}
+#clinicas ul{
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+  text-transform: none;
+}
+.footer-area{
+  display: flex;
+  margin-top: 1rem;
+ 
+}
+.footer-area-card{
+  flex: 1;
+  color: var(--primary-font-color);
+ 
+}
+.footer-area-card .widget{
+  
+  margin: 0px 20px;
+}
+#logo {
+  padding: 0;
+}
+
+.footer-copy{
+  font-size: 12px;
+  border-top: 1px solid var(--secundary-font-color);
+  margin-top: 30px;
+  color: var(--secundary-font-color);
+  text-align: center;
+  line-height: 40px;
+}
+footer a {
+  text-decoration: none;
+  color:var(--secundary-font-color);
+  
+}
+footer a:hover {
+ 
+  text-decoration: underline;
+  color: var(--bg-color);
 }
