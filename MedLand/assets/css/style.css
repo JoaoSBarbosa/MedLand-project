@@ -9,6 +9,7 @@
   --secundary-font-color: #727272;
   --font-size: 4.35rem;
   --font: Arial, Helvetica, sans-serif;
+  --footer-font-size: 0.93rem;
 }
 
 /*--Geral--*/
@@ -388,6 +389,8 @@ article .reference-resume p {
 .flex-column{
   flex-direction: column;
 }
+
+/* estilização do footer*/
 footer {
   background-color: #000;
   display: flex;
@@ -395,6 +398,7 @@ footer {
   justify-content: center;
   margin-top: 2rem;
   text-transform: uppercase;
+ 
 }
 .footer-menu{
   display: flex;
@@ -417,42 +421,81 @@ footer {
 #card-4{
   background-color: var(--bd-color-card-4);
 }
+.footer-card a{
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+.footer-card a:hover{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.pag-type{
+  display: flex;
+  justify-content: flex-start;
+}
+.pag-type i {
+  padding: 5px 10px;
+}
+.pag-type i:hover{
+  color: var(--bg-color);
+}
+/* area do footer*/
+.footer-area{
+  display: flex;
+  margin-top: 1rem;
+}
+/* seções do footer*/
+.footer-area-card{
+  flex: 1;
+  color: var(--primary-font-color);
+}
+
+
+/* Redes sociais*/
+
 .redes-s{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-right: 20px;
-  
+  font-size: 1.5rem;
 }
 
-.redes-s i{
-  font-size: 2rem;
+/* clinicas endereço*/
+
+.widget-body-clinc{
+  margin: 1rem 0;
+}
+address{
+  font-style: normal;
+  color: var(--secundary-font-color);
+  
 }
 #clinicas {
   padding: 0px 5px;
 }
+.address{
+ 
+  margin-bottom: 2rem;
+}
 #clinicas ul{
   list-style: none;
   padding: 0;
-  font-size: 12px;
+  font-size: var(--footer-font-size);
+  line-height: 1.2rem;
   text-transform: none;
 }
-.footer-area{
-  display: flex;
-  margin-top: 1rem;
- 
+
+/* informações e links*/
+.widget-body-info a{
+  font-size: var(--footer-font-size);
+  text-transform: none;
 }
-.footer-area-card{
-  flex: 1;
-  color: var(--primary-font-color);
- 
-}
+
+
 .footer-area-card .widget{
-  
-  margin: 0px 20px;
-}
-#logo {
-  padding: 0;
+  margin: 10px 20px;
+
 }
 
 .footer-copy{
@@ -469,7 +512,6 @@ footer a {
   
 }
 footer a:hover {
- 
   text-decoration: underline;
   color: var(--bg-color);
 }
