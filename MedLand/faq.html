@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="./assets/img/Favicon.ico" type="image/x-icon">
+  <!---Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Centro médico MedLand</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body style="background-color: rgb(217, 217, 217)">
+  <!--Área de cabeçalho-->
+  <header id="faq-menu">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/logo-remove.png" alt="Logo MedLand" /></a>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li class="active"><a href="index.html">home</a></li>
+            <li><a href="departamentos.html">departamentos</a></li>
+            <li><a href="convenio.html">convênios</a></li>
+            <li><a href="#contato">contato</a></li>
+            <li><a href="faq.html">faq</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="banner-faq">
+    <div class="container column" id="faq">
+      <div class="banner-text" id="text-faq">
+        <h1>Perguntas Frequentes</h1>
+      </div>
+    </div>
+  </section>
+
+  <section id="geral">
+    <div class="container-faq ">
+      <div class="faqs">
+        <button onclick="myFunction('agendar')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> Como agendar uma consulta</button>
+
+        <div id="agendar" class="w3-container w3-hide">
+          <p>Fale com a nossa Central de Agendamento:</p>
+
+          <p>Telefone: (11) 46470258, opção nº 2.</p>
+          <p>Horário de Funcionamento: 24h.</p>
+        </div>
+      </div>
+      <div class="faqs">
+
+        <button onclick="myFunction('convenios')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> Quais convênios são atendidos pelo MedicLand ?</button>
+
+        <div id="convenios" class="w3-container w3-hide">
+          <p><a href="convenio.html">Clique aqui</a> para conferir a lista completa dos convênios atendidos em nosso hospital.</p>
+        </div>
+      </div>
+
+      <div class="faqs">
+        <button onclick="myFunction('sus')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> O MadicLand atende pelo SUS ?</button>
+
+        <div id="sus" class="w3-container w3-hide">
+          <p>Atendemos somente convênios e particulares.</p>
+        </div>
+      </div>
+
+      <div class="faqs">
+        <button onclick="myFunction('prontuario')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> Como solicitar uma cópia do prontuário do paciente ?</button>
+
+        <div id="prontuario" class="w3-container w3-hide">
+          <p><a href="index.html#contato">Entre em contato</a>, ou, se preferir, pessoalmente em uma das nossas clinicas, de segunda a sexta-feira, das 9h às 19h.</p>
+        </div>
+      </div>
+      <div class="faqs">
+        <button onclick="myFunction('localizacao')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> Onde está localizado o hispital MadicLand ?</button>
+
+        <div id="localizacao" class="w3-container w3-hide">
+          <ul>
+            <li>Unidade São Paulo: Av Luz, 103 - São Paulo -SP-08579011 </li>
+            <li>Unidade Guarulhos: Avenida Tiradentes, 1287 - São Paulo -SP-08579011</li>
+           </ul>
+        </div>
+      </div>
+
+      <div class="faqs">
+        <button onclick="myFunction('necessario-agendar')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> É necessário agendamento ?</button>
+
+        <div id="necessario-agendar'" class="w3-container w3-hide">
+          <p>Sim. Só não é necessário fazer agendamento para consultas com o clínico geral.</p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+  </section>
+
+  </div>
+  </section>
+
+  <!---Rodapé-->
+  <footer>
+    <div class="container flex-column">
+
+      <div class="footer-menu">
+
+
+        <div class="footer-card" id="card-1">
+          <a href="convenio.html">
+            <div class="refence-title">
+              <h2>Convenios</h2>
+            </div>
+
+            <div class="reference-resume">
+              <p>Veja a lista de conenios aceito</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="footer-card" id="card-2">
+
+          <a href="departamentos.html">
+            <div class="refence-title">
+              <h2>Equipe médica</h2>
+            </div>
+            <div class="reference-resume">
+              <p>Conheça nossa equipe médica altamente preparada</p>
+            </div>
+          </a>
+
+        </div>
+        <div class="footer-card" id="card-3">
+          <a href="https://www.google.com.br/maps/place/Guarulhos,+SP/@-23.4443412,-46.5004463,13z/data=!3m1!4b1!4m5!3m4!1s0x94cef53fb1b5e26d:0x974ce18d22c3555b!8m2!3d-23.4596858!4d-46.5328559" target="_blank">
+            <div class="refence-title">
+              <h2>Regiões</h2>
+            </div>
+            <div class="reference-resume">
+              <p>Clínicas de facil localização</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="footer-card" id="card-4">
+          <div class="refence-title">
+            <h2>Aceitamos diversas formas de pagamentos</h2>
+          </div>
+          <div class="reference-resume">
+            <div class="pag">
+              <div class="pag-type">
+                <i class="fa-brands fa-pix" title="Pix"></i>
+                <i class="fa-solid fa-money-bill-transfer" title="Transferência bancária"></i>
+                <i class="fa-brands fa-cc-paypal" title="PayPal"></i>
+
+                <i class="fa-brands fa-cc-visa" title="Visa"></i>
+                <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+                <i class="fa-brands fa-cc-amex" title="Amex"></i>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-area">
+        <div class="footer-area-card">
+
+          <div class="widget">
+            <div class="widget-title">
+              <div class="widget-title-text">MedicLand <i class="fa-regular fa-hospital"></i></div>
+              <div class="widget-title-text-bar"></div>
+            </div>
+            <div class="widget-body" id="logo">
+              <img src="./assets/img/logo-remove.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-area-card">
+
+          <div class="widget">
+            <div class="widget-title">
+              <div class="widget-title-text">Redes sociais <i class="fa-sharp fa-solid fa-globe"></i></div>
+              <div class="widget-title-text-bar"></div>
+            </div>
+
+            <div class="widget-body" id="redes-sociais">
+              <div class="redes-s">
+                <div>
+                  <a href="https://github.com/JoaoSBarbosa" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div>
+                  <a href="https://www.linkedin.com/in/joao-da-silva-barbosa/" target="_blank" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div>
+                  <a href="https://www.instagram.com/joao_sbx/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-area-card">
+
+          <div class="widget" id="clinicas">
+            <div class="widget-title">
+              <div class="widget-title-text">Clínicas <i class="fa-solid fa-map-location-dot"></i></div>
+              <div class="widget-title-text-bar"></div>
+            </div>
+            <div class="widget-body" id="clinicas">
+
+              <address>
+                <div class="address">
+                  <span>São Paulo</span>
+                  <div class="widget-body-clinc">
+                    <ul>
+                      <li>Av Luz, 103 - São Paulo -SP-08579011</li>
+                      <li>Telefones: 11 46470258</li>
+                      <li>E-mail: spcontato@medicland.com</li>
+                      <li>Horario: 24h</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="address">
+                  <span>Guarulhos</span>
+                  <div class="widget-body-clinc">
+                    <ul>
+                      <li>Avenida Tiradentes, 1287 - São Paulo -SP-08579011</li>
+                      <li>Telefones: 11 46430257</li>
+                      <li>E-mail: grucontato@medicland.com</li>
+                      <li>Horario: 24h </li>
+                    </ul>
+                  </div>
+                </div>
+              </address>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-area-card">
+
+          <div class="widget" id="clinicas">
+            <!--Titulo e decoração-->
+            <div class="widget-title">
+              <div class="widget-title-text">Informações <i class="fa-solid fa-circle-info"></i></div>
+              <div class="widget-title-text-bar"></div>
+            </div>
+            <div class="widget-body" id="info">
+              <div class="widget-body-info">
+                <p><a herf="">Termos</a></p>
+                <p><a href="faq.html">Perguntas frequentes</a></p>
+                <p><a href="">Trabalhe conosco</a></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy">
+        MedicLand &copy; 2022 todos os direitos reservados by: <a href="https://github.com/JoaoSBarbosa" target="_blank" title="github">João Barbosa
+      </div>
+
+
+
+
+    </div>
+  </footer>
+
+</body>
+<script defer src="assets/js/script.js"></script>
+
+</html>

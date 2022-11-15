@@ -1,5 +1,4 @@
 :root {
-  --container: 1200px;
   --bg-color: #2ac5d9;
   --bg-color-card-1: #1ca39e;
   --bg-color-card-2: #026f6e;
@@ -20,7 +19,6 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: var(--font);
-  transition: all 0.6s linear;
 }
 
 /*--Estilização do cabeçalho--*/
@@ -33,7 +31,7 @@ header {
 .container {
   display: flex;
   justify-content: space-between;
-  width: var(--container);
+  width: 990px;
 }
 
 /*---Área do logo---*/
@@ -57,42 +55,46 @@ nav ul {
   display: flex;
 }
 nav a {
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
-  margin-left: 1rem;
   color: var(--secundary-font-color);
   padding: 15px;
+  margin-right: 20px;
 }
 
 nav .active a,
 nav a:hover {
   background-color: var(--bg-color);
   color: var(--primary-font-color);
-  border-radius: 12px;
+  border-radius: 2px;
 }
 
 /*---Estilização do banner---*/
 #banner,
 #banner-dp,
-#banner-convenio {
+#banner-convenio,
+#banner-faq {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/img.jpg");
   background-position: center;
   background-size: cover;
-  height: 710px;
+  height: 690px;
+  width: 100%;
   filter: grayscale(0%);
   transition: all 0.6s linear;
+}
+#banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/img.jpg");
 }
 #banner:hover {
   filter: grayscale(40%);
 }
-
 .column {
   flex-direction: column;
 }
-.banner-text {
+.banner-headline {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -100,29 +102,29 @@ nav a:hover {
   color: var(--primary-font-color);
   font-family: var(--font);
 }
-.banner-text h1,
-.banner-text h2 {
+.banner-headline h1,
+.banner-headline h2 {
   text-shadow: 0px 1px 0px #555555;
   padding: 0;
   margin: 0;
-  max-width: 400px;
+  max-width: 450px;
 }
-.banner-text h1 {
+.banner-headline h1 {
   font-size: var(--font-size);
 }
-.banner-text h2 {
+.banner-headline h2 {
   font-size: 1.72rem;
   margin-top: 2rem;
 }
-.banner-specialties {
+
+.banner-options {
+  height: 210px;
   display: flex;
-  flex-direction: row;
-  height: 230px;
   color: var(--primary-font-color);
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 
-.box-specialties {
+.banner-options-specialties {
   flex: 1;
   padding: 20px;
 }
@@ -143,20 +145,20 @@ nav a:hover {
 }
 .box-specialties-desc {
   font-size: 0.75rem;
-  margin: 20px 0 5px 0px;
-  height: 108px;
+  margin: 20px 0px;
+  height: 80px;
 }
-.box-specialties a {
+.banner-options-specialties a {
   display: inline-block;
-  border: 1px solid #ffff;
+  border: 1px solid var(--primary-font-color);
   border-radius: 12px;
   padding: 8px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--primary-font-color);
   text-decoration: none;
   font-size: 15px;
   color: rgb(22, 22, 22);
 }
-.box-specialties a:hover {
+.banner-options-specialties a:hover {
   background-color: var(--bg-color);
   font-weight: bold;
 }
@@ -193,8 +195,8 @@ nav a:hover {
   justify-content: space-around;
 }
 .widget-body-card {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   margin: 5px;
   margin-right: 0px;
   background-color: var(--bg-color);
@@ -292,7 +294,7 @@ nav a:hover {
 }
 .departamento {
   padding-left: 29px;
-  transition: .4s;
+  transition: 0.4s;
 }
 .departamento ul {
   list-style: none;
@@ -331,8 +333,38 @@ nav a:hover {
 .convenios li:hover {
   background-color: #19274e;
 }
+/* Página FAQ*/
 
-
+#banner-faq {
+  max-height: 500px;
+  background-image: url("../img/FAQs-cuate.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#faq-menu {
+  background-color: var(--primary-font-color);
+}
+#text-faq {
+  color: var(--bd-color-card-4);
+}
+.faqs {
+  margin-top: 10px;
+}
+.container-faq button {
+  width: 850px;
+  border-radius: 8px;
+  padding: 20px;
+}
+.container-faq button:hover {
+  font-weight: bold;
+}
+.faqs a{
+  text-decoration: none;
+  color: #2900f8;
+}
+.faqs a:hover {
+  color: var(--bg-color-card-2);
+}
 /* -- Estilização de Referências -- */
 .flex {
   display: flex;
@@ -386,10 +418,30 @@ article .reference-resume p {
   line-height: 20px;
   margin-bottom: 30px;
 }
-.flex-column{
+.flex-column {
   flex-direction: column;
 }
+.widget-title-fale-conosco {
+  width: 100%;
+  height: 2px;
+  background-color: darkgrey;
+  margin-top: 10px;
+}
+.contato-car {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
+  padding: 5px;
+}
+.contato-car i {
+  background-color: #939393;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  padding: 5px;
+  color: var(--primary-font-color);
+  margin-right: 15px;
+}
 /* estilização do footer*/
 footer {
   background-color: #000;
@@ -398,62 +450,62 @@ footer {
   justify-content: center;
   margin-top: 2rem;
   text-transform: uppercase;
- 
 }
-.footer-menu{
+.footer-menu {
   display: flex;
-  
 }
-.footer-card{
+.footer-card {
   flex: 1;
-  padding: 1.25rem;
+  padding: 20px;
   color: var(--primary-font-color);
 }
-#card-1{
+.footer-card a {
+  display: block;
+}
+#card-1 {
   background-color: var(--bg-color-card-1);
 }
-#card-2{
+#card-2 {
   background-color: var(--bg-color-card-2);
 }
-#card-3{
+#card-3 {
   background-color: var(--bg-color-card-3);
 }
-#card-4{
+#card-4 {
   background-color: var(--bd-color-card-4);
 }
-.footer-card a{
+.footer-card a {
   text-decoration: none;
   color: var(--primary-font-color);
 }
-.footer-card a:hover{
+.footer-card a:hover {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
-.pag-type{
+.pag-type {
   display: flex;
   justify-content: flex-start;
 }
 .pag-type i {
   padding: 5px 10px;
 }
-.pag-type i:hover{
+.pag-type i:hover {
   color: var(--bg-color);
 }
 /* area do footer*/
-.footer-area{
+.footer-area {
   display: flex;
   margin-top: 1rem;
 }
 /* seções do footer*/
-.footer-area-card{
+.footer-area-card {
   flex: 1;
   color: var(--primary-font-color);
 }
 
-
 /* Redes sociais*/
 
-.redes-s{
+.redes-s {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -463,22 +515,20 @@ footer {
 
 /* clinicas endereço*/
 
-.widget-body-clinc{
+.widget-body-clinc {
   margin: 1rem 0;
 }
-address{
+address {
   font-style: normal;
   color: var(--secundary-font-color);
-  
 }
 #clinicas {
   padding: 0px 5px;
 }
-.address{
- 
+.address {
   margin-bottom: 2rem;
 }
-#clinicas ul{
+#clinicas ul {
   list-style: none;
   padding: 0;
   font-size: var(--footer-font-size);
@@ -487,18 +537,16 @@ address{
 }
 
 /* informações e links*/
-.widget-body-info a{
+.widget-body-info a {
   font-size: var(--footer-font-size);
   text-transform: none;
 }
 
-
-.footer-area-card .widget{
+.footer-area-card .widget {
   margin: 10px 20px;
-
 }
 
-.footer-copy{
+.footer-copy {
   font-size: 12px;
   border-top: 1px solid var(--secundary-font-color);
   margin-top: 30px;
@@ -508,10 +556,89 @@ address{
 }
 footer a {
   text-decoration: none;
-  color:var(--secundary-font-color);
-  
+  color: var(--secundary-font-color);
 }
 footer a:hover {
   text-decoration: underline;
   color: var(--bg-color);
+}
+.menu-mobile {
+  display: none;
+  height: 40px;
+  width: 40px;
+  margin: 40px 20px;
+  
+}
+.menu-mobile-line{
+  height: 3px;
+  background-color: var(--bg-color);
+}
+@media (max-width: 600px) {
+  .banner-headline {
+    padding: 20px;
+  }
+  .banner-headline h1 {
+    font-size: 55px;
+  }
+  .banner-headline h2 {
+    font-size: 17px;
+  }
+  .banner-options {
+    height: auto;
+    flex-direction: column;
+  }
+  .box-specialties-desc {
+    height: auto;
+  }
+  .referencia {
+    margin-top: 22rem;
+  }
+  .footer-menu {
+    flex-direction: column;
+  }
+  .footer-area {
+    flex-direction: column;
+  }
+  .redes-s i {
+    font-size: 45px;
+  }
+  #banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .container {
+    flex-direction: column;
+    /*padding: 20px;*/
+  }
+  #geral section,
+  #geral aside {
+    padding: 23px; /*23*/
+  }
+  .widget-body-card{
+    width: 260px;
+    height: 300px;
+  }
+  header .container {
+    flex-direction: row;
+  }
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+  nav ul a {
+    margin: 8px 5px;
+  }
+
+  header {
+    height: auto;
+  }
+  .logo {
+    padding-left: 20px;
+  }
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }

@@ -23,7 +23,14 @@
       </div>
       <div class="menu">
         <nav>
+          <div class="menu-mobile">
+            <div class="menu-mobile-line"></div>
+            <div class="menu-mobile-line"></div>
+            <div class="menu-mobile-line"></div>
+          </div>
           <ul>
+
+
             <li class="active"><a href="index.html">home</a></li>
             <li><a href="departamentos.html">departamentos</a></li>
             <li><a href="convenio.html">convênios</a></li>
@@ -34,44 +41,49 @@
       </div>
     </div>
   </header>
-
+  <!--- conteudo do site-->
   <section id="banner">
+
     <div class="container column">
-      <div class="banner-text">
+      <div class="banner-headline">
         <h1>Medicina de primeira qualidade</h1>
         <h2>Na MedLand, contamos com profissionais capacitados em diversas especialidades, prontos para atendê-lo com toda qualidade possível.</h2>
       </div>
-      <div class="banner-specialties">
 
-        <div class="box-specialties" id="specialties-1">
+      <div class="banner-options">
+
+        <div class="banner-options-specialties" id="specialties-1">
           <div class="box-specialties-title">Clínico geral <i class="fa-solid fa-user-doctor"></i></div>
           <div class="box-specialties-desc">
             Quando os pacientes apresentam determinados sintomas, muitas vezes não têm certeza de qual especialidade procurar, então procuram um clínico geral
           </div>
-          <a href="/">Agendar consulta</a>
-        </div>
-        <div class="box-specialties" id="specialties-2">
-          <div class="box-specialties-title">Pediatria <i class="fa-solid fa-baby"></i></div>
-          <div class="box-specialties-desc">
-            A Pediatria é a especialidade médica responsável pela prevenção, diagnóstico e tratamento de doenças desde o nascimento. Realiza os primeiros exames dos bebés, como os exames dos pés e dos ouvidos.
-          </div>
-          <a href="/">Agendar consulta</a>
+          <a href="#contato">Agendar consulta</a>
         </div>
 
-        <div class="box-specialties" id="specialties-3">
+        <div class="banner-options-specialties" id="specialties-2">
+          <div class="box-specialties-title">Pediatria <i class="fa-solid fa-bone"></i></div>
+          <div class="box-specialties-desc">
+            A ortopedia é a especialidade médica responsável pelo tratamento, prevenção e diagnóstico de lesões nos ossos, músculos, tendões, articulações e nervos.
+          </div>
+          <a href="#contato">Agendar consulta</a>
+        </div>
+        <div class="banner-options-specialties" id="specialties-3">
           <div class="box-specialties-title">Ortopedia <i class="fa-solid fa-bone"></i></div>
           <div class="box-specialties-desc">
             A ortopedia é a especialidade médica responsável pelo tratamento, prevenção e diagnóstico de lesões nos ossos, músculos, tendões, articulações e nervos.
           </div>
-          <a href="index.html">Agendar consulta</a>
+          <a href="#contato">Agendar consulta</a>
         </div>
 
-        <div class="box-specialties" id="specialties-4">
-          <div class="box-specialties-title">Ginecologista <i class="fa-solid fa-venus"></i></div>
+
+        <div class="banner-options-specialties" id="specialties-4">
+          <div class="box-specialties-title">
+            Ginecologia <i class="fa-solid fa-venus"></i>
+          </div>
           <div class="box-specialties-desc">
             A ginecologia é a profissão responsável por acompanhar todas as fases da vida da mulher, pois os ginecologistas podem detectar, diagnosticar e tratar lesões entre os ovários, útero, mamas e vagina.
           </div>
-          <a href="index.html">Agendar consulta</a>
+          <a href="#contato">Agendar consulta</a>
         </div>
       </div>
     </div>
@@ -80,7 +92,7 @@
   <section id="geral">
     <div class="container">
       <!--Referências-->
-      <section>
+      <section class="referencia">
         <div class="widget">
           <div class="widget-title">
             <div class="widget-title-text">Referências</div>
@@ -165,7 +177,7 @@
       </section>
       <aside>
         <!--Departamento-->
-        <div class="widget" id="contato">
+        <div class="widget" id="departamento">
           <div class="widget-title">
             <div class="widget-title-text">Departamentos</div>
             <div class="widget-title-text-bar"></div>
@@ -177,7 +189,7 @@
             <div class="widget-body-card" id="pediatria">
               <a href="departamentos.html"><span>Pediatria</span></a>
             </div>
-            <div class="widget-body-card" id="ginecologista"><a href="departamentos.html">Ginecologista</a></div>
+            <div class="widget-body-card" id="ginecologista"><a href="departamentos.html">Ginecologia </a></div>
             <div class="widget-body-card" id="ortopedia"><a href="departamentos.html">Ortopedia</a></div>
           </div>
         </div>
@@ -185,12 +197,23 @@
         <div class="widget">
           <div class="widget-title">
             <div class="widget-title-text" id="fale-conosco">Fale Conosco</div>
-            <div class="widget-title-text-bar">
-              <p>Fale Conosco se tiver duvidas sobre agendamento, consultas, endereço, convenios</p>
-            </div>
+            <div class="widget-title-text-bar"></div>
           </div>
           <div class="widget-body">
-
+            <p>Entre em contato conosco se tiver dúvidas sobre agendamento, consultas, endereço, convênios e demais assuntos.</p>
+            <div class="widget-title-fale-conosco"></div>
+            <div class="contato">
+              <div class="contato-car">
+                <i class="fa-solid fa-phone"></i>
+                <p>Telefone: 11 46430257</p>
+              </div>
+              <div class="widget-title-fale-conosco"></div>
+              <div class="contato-car">
+                <i class="fa-regular fa-envelope"></i>
+                <p>E-mail: contato@medicland.com</p>
+              </div>
+              <div class="widget-title-fale-conosco"></div>
+            </div>
           </div>
         </div>
       </aside>
@@ -202,8 +225,6 @@
     <div class="container flex-column">
 
       <div class="footer-menu">
-
-
         <div class="footer-card" id="card-1">
           <a href="convenio.html">
             <div class="refence-title">
@@ -211,7 +232,7 @@
             </div>
 
             <div class="reference-resume">
-              <p>Veja a lista de conenios aceito</p>
+              <p>Ver lista de Convênios aceitos</p>
             </div>
           </a>
         </div>
@@ -228,20 +249,24 @@
           </a>
 
         </div>
+
+
+
+
         <div class="footer-card" id="card-3">
           <a href="https://www.google.com.br/maps/place/Guarulhos,+SP/@-23.4443412,-46.5004463,13z/data=!3m1!4b1!4m5!3m4!1s0x94cef53fb1b5e26d:0x974ce18d22c3555b!8m2!3d-23.4596858!4d-46.5328559" target="_blank">
             <div class="refence-title">
               <h2>Regiões</h2>
             </div>
             <div class="reference-resume">
-              <p>Clínicas de facil localização</p>
+              <p>Clínicas bem localizadas</p>
             </div>
           </a>
         </div>
 
         <div class="footer-card" id="card-4">
           <div class="refence-title">
-            <h2>Aceitamos diversas formas de pagamentos</h2>
+            <h2>Aceitamos diferentes formas de pagamento</h2>
           </div>
           <div class="reference-resume">
             <div class="pag">
@@ -348,9 +373,9 @@
             </div>
             <div class="widget-body" id="info">
               <div class="widget-body-info">
-                <p><a herf="">Termos</a></p>
-                <p><a href="">Perguntas frequentes</a></p>
-                <p><a href="">Trabalhe conosco</a></p>
+                <p><a herf="index.html">Termos</a></p>
+                <p><a href="faq.html">Perguntas frequentes</a></p>
+                <p><a href="index.html">Trabalhe conosco</a></p>
               </div>
 
             </div>
