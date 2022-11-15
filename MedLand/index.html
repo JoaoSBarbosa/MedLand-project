@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title>Centro médico MedLand</title>
+  <link rel="stylesheet" href="assets/css/resset.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -29,12 +30,10 @@
             <div class="menu-mobile-line"></div>
           </div>
           <ul>
-
-
             <li class="active"><a href="index.html">home</a></li>
             <li><a href="departamentos.html">departamentos</a></li>
             <li><a href="convenio.html">convênios</a></li>
-            <li><a href="#contato">contato</a></li>
+            <li><a href="index.html#fale-conosco">contato</a></li>
             <li><a href="faq.html">faq</a></li>
           </ul>
         </nav>
@@ -94,7 +93,7 @@
       <!--Referências-->
       <section class="referencia">
         <div class="widget">
-          <div class="widget-title">
+          <div class="widget-title mobile-title">
             <div class="widget-title-text">Referências</div>
             <div class="widget-title-text-bar"></div>
           </div>
@@ -175,10 +174,10 @@
           </div>
         </div>
       </section>
-      <aside>
+      <aside class="aside-bar">
         <!--Departamento-->
         <div class="widget" id="departamento">
-          <div class="widget-title">
+          <div class="widget-title mobile-title">
             <div class="widget-title-text">Departamentos</div>
             <div class="widget-title-text-bar"></div>
           </div>
@@ -194,8 +193,8 @@
           </div>
         </div>
         <!--Contato-->
-        <div class="widget">
-          <div class="widget-title">
+        <div class="widget" id="widget-contato">
+          <div class="widget-title mobile-title">
             <div class="widget-title-text" id="fale-conosco">Fale Conosco</div>
             <div class="widget-title-text-bar"></div>
           </div>
@@ -385,13 +384,9 @@
       <div class="footer-copy">
         MedicLand &copy; 2022 todos os direitos reservados by: <a href="https://github.com/JoaoSBarbosa" target="_blank" title="github">João Barbosa
       </div>
-
-
-
-
     </div>
   </footer>
-
+  <script defer src="assets/js/script.js"></script>
 </body>
 
 </html>

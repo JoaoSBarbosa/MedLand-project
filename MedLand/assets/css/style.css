@@ -79,10 +79,11 @@ nav a:hover {
   justify-content: center;
   background-position: center;
   background-size: cover;
-  height: 690px;
-  width: 100%;
-  filter: grayscale(0%);
+  height: 670px;
+  /*width: 100%;*/
+  /*filter: grayscale(0%);
   transition: all 0.6s linear;
+  margin-bottom: 10rem;*/
 }
 #banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -336,35 +337,44 @@ nav a:hover {
 /* Página FAQ*/
 
 #banner-faq {
-  max-height: 500px;
   background-image: url("../img/FAQs-cuate.png");
   background-size: contain;
+  background-position: right;
   background-repeat: no-repeat;
 }
-#faq-menu {
-  background-color: var(--primary-font-color);
+.column-faq {
+  display: flex;
+  flex-direction: column;
+  width: 990px;
 }
-#text-faq {
-  color: var(--bd-color-card-4);
+#banner-headline-faq h1 {
+  color: var(--bg-color-card-3);
+  font-weight: 900px;
 }
-.faqs {
-  margin-top: 10px;
-}
-.container-faq button {
-  width: 850px;
+
+.faqs button {
+  margin: 10px 0;
+  font-weight: 900;
+  width: calc(100% - 30px);
   border-radius: 8px;
   padding: 20px;
 }
-.container-faq button:hover {
-  font-weight: bold;
+
+.faqs-text {
+  background-color: var(--bg-color-card-1);
+  width: calc(100% - 32px);
+  border-radius: 6px;
+  color: black;
+  font-weight: 500;
 }
-.faqs a{
+.faqs a {
   text-decoration: none;
   color: #2900f8;
 }
 .faqs a:hover {
-  color: var(--bg-color-card-2);
+  color: var(--primary-font-color);
 }
+
 /* -- Estilização de Referências -- */
 .flex {
   display: flex;
@@ -564,17 +574,20 @@ footer a:hover {
 }
 .menu-mobile {
   display: none;
-  height: 40px;
   width: 40px;
-  margin: 40px 20px;
-  
+  height: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 20px;
 }
-.menu-mobile-line{
+.menu-mobile-line {
   height: 3px;
   background-color: var(--bg-color);
 }
-@media (max-width: 600px) {
-  .banner-headline {
+@media (max-width: 768px) {
+  .banner-headline,
+  .banner-faq,
+  .banner-text {
     padding: 20px;
   }
   .banner-headline h1 {
@@ -602,6 +615,7 @@ footer a:hover {
   .redes-s i {
     font-size: 45px;
   }
+
   #banner {
     background-size: cover;
     background-repeat: no-repeat;
@@ -613,9 +627,9 @@ footer a:hover {
   }
   #geral section,
   #geral aside {
-    padding: 23px; /*23*/
+    padding: 23px;
   }
-  .widget-body-card{
+  .widget-body-card {
     width: 260px;
     height: 300px;
   }
@@ -625,6 +639,14 @@ footer a:hover {
   nav ul {
     flex-direction: column;
     display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-font-color);
+    z-index: 2;
+  }
+  #banner {
+    z-index: 1;
   }
   nav ul a {
     margin: 8px 5px;
@@ -640,5 +662,147 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+  .banner-text h2 {
+    text-align: center;
+  }
+  #geral {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-faq button {
+    width: calc(100% - 10px);
+  }
+
+  .footer-menu {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 320px) {
+  #geral section {
+    padding: 123px;
+  }
+
+  #banner-headline-faq h1 {
+    font-size: 32px;
+  }
+  .column-faq {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faqs button {
+    font-size: 0.75rem;
+    height: auto;
+    white-space: wrap;
+  }
+
+  .w3-btn,
+  .w3-button {
+    white-space: normal !important;
+  }
+  .faqs-text {
+    padding: 15px;
+  }
+  .faqs p {
+    margin-bottom: 9px;
+  }
+  .faqs-text li {
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .menu a {
+    font-size: 1rem;
+  }
+  .referencia {
+    margin-top: 30rem;
+  }
+  .widget-body article {
+    padding: 10px;
+  }
+
+  #departamento {
+    max-width: 315px;
+  }
+  #departamento .mobile-title {
+    padding: 0px 10px;
+  }
+  .mobile-title {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+  }
+  .referencia .mobile-title {
+    padding: 0px 10px;
+  }
+  #widget-contato {
+    max-width: 315px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px;
+  }
+  .aside-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .widget {
+    padding: 0px;
+  }
+  .container-dp {
+    max-width: 318px;
+    height: auto;
+  }
+  .container-dp .departamento {
+    padding: 10px;
+    height: auto;
+  }
+  .container-convenio {
+    max-width: 315px;
+  }
+  .container-convenio .convenios {
+    padding-left: 10px;
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .referencia {
+    margin-top: 26rem;
+  }
+
+  #banner-headline-faq h1 {
+    font-size: 32px;
+  }
+  .column-faq {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faqs button {
+    font-size: 0.75rem;
+    height: auto;
+    white-space: wrap;
+  }
+
+  .w3-btn,
+  .w3-button {
+    white-space: normal !important;
+  }
+  .faqs-text {
+    padding: 15px;
+  }
+  .faqs p {
+    margin-bottom: 9px;
+  }
+  .faqs-text li {
+    margin-left: 15px;
+    margin-bottom: 10px;
   }
 }

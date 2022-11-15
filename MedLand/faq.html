@@ -5,106 +5,102 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!--Favicon-->
   <link rel="shortcut icon" href="./assets/img/Favicon.ico" type="image/x-icon">
   <!---Font Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <!--W3.css-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <title>Centro médico MedLand</title>
+  <!--CSS-->
+  <link rel="stylesheet" href="assets/css/resset.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body style="background-color: rgb(217, 217, 217)">
+<body>
   <!--Área de cabeçalho-->
-  <header id="faq-menu">
+  <header>
     <div class="container">
       <div class="logo">
         <a href="index.html"><img src="assets/img/logo-remove.png" alt="Logo MedLand" /></a>
       </div>
       <div class="menu">
         <nav>
+          <div class="menu-mobile">
+            <div class="menu-mobile-line"></div>
+            <div class="menu-mobile-line"></div>
+            <div class="menu-mobile-line"></div>
+          </div>
           <ul>
             <li class="active"><a href="index.html">home</a></li>
             <li><a href="departamentos.html">departamentos</a></li>
             <li><a href="convenio.html">convênios</a></li>
-            <li><a href="#contato">contato</a></li>
+            <li><a href="index.html#fale-conosco">contato</a></li>
             <li><a href="faq.html">faq</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-
   <section id="banner-faq">
-    <div class="container column" id="faq">
-      <div class="banner-text" id="text-faq">
+    <div class="column-faq">
+
+      <div class="banner-headline" id="banner-headline-faq">
         <h1>Perguntas Frequentes</h1>
+
+        <div class="faqs">
+          <button onclick="faq('agendar')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-aqua"><i class="fa-solid fa-circle-plus"></i> Como agendar uma consulta</button>
+          <div id="agendar" class="w3-container w3-hide faqs-text">
+            <p>Fale com a nossa Central de Agendamento:</p>
+            <p>Telefone: (11) 46470258, opção nº 2.</p>
+            <p>Horário de Funcionamento: 24h.</p>
+          </div>
+        </div>
+
+        <div class="faqs">
+          <button onclick="faq('convenios')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-aqua"><i class="fa-solid fa-circle-plus"></i> Quais convênios são atendidos pelo MedicLand ?</button>
+
+          <div id="convenios" class="w3-container w3-hide faqs-text">
+            <p><a href="convenio.html">Clique aqui</a> para conferir a lista completa dos convênios atendidos em nosso hospital.</p>
+          </div>
+        </div>
+
+        <div class="faqs">
+          <button onclick="faq('sus')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-aqua"><i class="fa-solid fa-circle-plus"></i> O MadicLand atende pelo SUS ?</button>
+
+          <div id="sus" class="w3-container w3-hide faqs-text">
+            <p>Atendemos somente convênios e particulares.</p>
+          </div>
+        </div>
+
+        <div class="faqs">
+          <button onclick="faq('prontuario')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-aqua"><i class="fa-solid fa-circle-plus"></i> Como solicitar uma cópia do prontuário do paciente ?</button>
+          <div id="prontuario" class="w3-container w3-hide faqs-text">
+            <p><a href="index.html#contato">Entre em contato</a>, ou, se preferir, pessoalmente em uma das nossas clinicas, de segunda a sexta-feira, das 9h às 19h.</p>
+          </div>
+        </div>
+
+        <div class="faqs">
+          <button onclick="faq('localizacao')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-aqua"><i class="fa-solid fa-circle-plus"></i> Onde está localizado o hispital MadicLand ?</button>
+          <div id="localizacao" class="w3-container w3-hide faqs-text">
+            <ul>
+              <li>Unidade São Paulo: Av Luz, 103 - São Paulo -SP-08579011 </li>
+              <li>Unidade Guarulhos: Avenida Tiradentes, 1287 - São Paulo -SP-08579011</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faqs">
+          <button onclick="faq('ag2')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-aqua"><i class="fa-solid fa-circle-plus"></i> É necessário agendamento ?</button>
+          <div id="ag2" class="w3-container w3-hide faqs-text">
+            <p>Sim. Só não é necessário fazer agendamento para consultas com o clínico geral.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="geral">
-    <div class="container-faq ">
-      <div class="faqs">
-        <button onclick="myFunction('agendar')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> Como agendar uma consulta</button>
 
-        <div id="agendar" class="w3-container w3-hide">
-          <p>Fale com a nossa Central de Agendamento:</p>
-
-          <p>Telefone: (11) 46470258, opção nº 2.</p>
-          <p>Horário de Funcionamento: 24h.</p>
-        </div>
-      </div>
-      <div class="faqs">
-
-        <button onclick="myFunction('convenios')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> Quais convênios são atendidos pelo MedicLand ?</button>
-
-        <div id="convenios" class="w3-container w3-hide">
-          <p><a href="convenio.html">Clique aqui</a> para conferir a lista completa dos convênios atendidos em nosso hospital.</p>
-        </div>
-      </div>
-
-      <div class="faqs">
-        <button onclick="myFunction('sus')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> O MadicLand atende pelo SUS ?</button>
-
-        <div id="sus" class="w3-container w3-hide">
-          <p>Atendemos somente convênios e particulares.</p>
-        </div>
-      </div>
-
-      <div class="faqs">
-        <button onclick="myFunction('prontuario')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> Como solicitar uma cópia do prontuário do paciente ?</button>
-
-        <div id="prontuario" class="w3-container w3-hide">
-          <p><a href="index.html#contato">Entre em contato</a>, ou, se preferir, pessoalmente em uma das nossas clinicas, de segunda a sexta-feira, das 9h às 19h.</p>
-        </div>
-      </div>
-      <div class="faqs">
-        <button onclick="myFunction('localizacao')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> Onde está localizado o hispital MadicLand ?</button>
-
-        <div id="localizacao" class="w3-container w3-hide">
-          <ul>
-            <li>Unidade São Paulo: Av Luz, 103 - São Paulo -SP-08579011 </li>
-            <li>Unidade Guarulhos: Avenida Tiradentes, 1287 - São Paulo -SP-08579011</li>
-           </ul>
-        </div>
-      </div>
-
-      <div class="faqs">
-        <button onclick="myFunction('necessario-agendar')" class="w3-btn w3-block w3-cyan w3-left-align w3-hover-blue-gray"><i class="fa-solid fa-circle-plus"></i> É necessário agendamento ?</button>
-
-        <div id="necessario-agendar'" class="w3-container w3-hide">
-          <p>Sim. Só não é necessário fazer agendamento para consultas com o clínico geral.</p>
-        </div>
-      </div>
-
-    </div>
-    </div>
-    </div>
-  </section>
-
-  </div>
   </section>
 
   <!---Rodapé-->
@@ -112,8 +108,6 @@
     <div class="container flex-column">
 
       <div class="footer-menu">
-
-
         <div class="footer-card" id="card-1">
           <a href="convenio.html">
             <div class="refence-title">
@@ -270,14 +264,9 @@
       <div class="footer-copy">
         MedicLand &copy; 2022 todos os direitos reservados by: <a href="https://github.com/JoaoSBarbosa" target="_blank" title="github">João Barbosa
       </div>
-
-
-
-
     </div>
   </footer>
-
+  <script defer src="assets/js/script.js"></script>
 </body>
-<script defer src="assets/js/script.js"></script>
 
 </html>
